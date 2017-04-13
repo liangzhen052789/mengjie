@@ -5,48 +5,82 @@ var initWidth = 1920,
 
 $(".main").css({
 	"width": win.width(),
-	"height": win.height()-1
+	"height": win.height() - 1
 });
 var _w = win.width() + (2400 - 1920) * win.width() / 1920
 
 $(".animate_x img").css("width", _w);
 $(".animate_y img").css("width", win.width());
 //轮播
-	var timer = null;
-	$(".list li").eq(0).show();
-	$(".pop li").click(function() {
-		$(this).addClass('cur').siblings().removeClass("cur");
-		var index = $(this).index();
-		i = index;
-		$(".list li").eq(index).fadeIn(800).siblings().fadeOut(800);
-	});
-    var i = 0;
-    timer = setInterval(play, 4000);
-	function play() {
-		i++;
-		i = i > 4 ? 0 : i;
-		$(".pop li").eq(i).addClass('cur').siblings().removeClass("cur");
-		$(".list li").eq(i).fadeIn(800).siblings().fadeOut(800);
-	}
+var timer = null;
+$(".list li").eq(0).show();
+$(".reset li").eq(0).show();
+$(".pop li").click(function() {
+	$(this).addClass('cur').siblings().removeClass("cur");
+	var index = $(this).index();
+	i = index;
+	$(".list li").eq(index).fadeIn(800).siblings().fadeOut(800);
+	$(".reset li").eq(index).fadeIn(800).siblings().fadeOut(800);
+});
+var i = 0;
+timer = setInterval(play, 5000);
 
-	$(".main").hover(function() {
-		clearInterval(timer);
-	}, function() {
-		timer = setInterval(play, 4000);
-	});
-	
-	
+function play() {
+	i++;
+	i = i > 4 ? 0 : i;
+	$(".pop li").eq(i).addClass('cur').siblings().removeClass("cur");
+	$(".list li").eq(i).fadeIn(800).siblings().fadeOut(800);
+	$(".reset li").eq(i).fadeIn(800).siblings().fadeOut(800);
+}
+
+//$(".pop li").hover(function() {
+//	clearInterval(timer);
+//}, function() {
+//	timer = setInterval(play, 5000);
+//});
+
 //列表
-   $(".level1 > a").click(function(){  
-          var iclass = $(this).attr("class");  
-          if (iclass=="current"){  
-              $(this).next().hide();  
-          }else {  
-              $(this).addClass("current").next().show()  
-                      .parent().siblings()  
-                      .children("a").removeClass("current").next().hide();    
-              return false;  
-          }  
-      });   
- 
-  
+$('.leftbar_main').hover(function() {
+	$('.meanu').stop().fadeOut(800);
+	$('.xianshi').stop().fadeIn(800);
+}, function() {
+	$('.xianshi').stop().fadeOut(800);
+	$('.meanu').stop().fadeIn(800);
+});
+$('.xianshi').find('li').click(function() {
+	$('.xianshi').find('li').find('ul').stop().slideUp(500);
+	if($(this).find('ul').css('display') == 'block') {
+		$(this).find('ul').stop().slideUp(500);
+	} else {
+		$(this).find('ul').stop().slideDown(500);
+	}
+})
+
+//中间xiao轮播
+$(".banner .reset").hover(function() {
+	clearInterval(timer);
+	$(".banner .reset li").find("h3").animate({
+		"top": "-5%",
+		"opacity": "0"
+	}, 500);
+	$(".banner .list li").find("img").addClass("blur");
+	$(".banner .reset li").find(".txt").animate({
+		"top": "7.5%",
+		"opacity": "1"
+	}, 500, function() {
+		$(".banner .reset li").find(".btn").fadeIn(500);
+	});
+
+}, function() {
+	$(".banner .reset li").find("h3").animate({
+		"top": "0%",
+		"opacity": "1"
+	}, 500);
+	$(".banner .list li").find("img").removeClass("blur");
+	$(".banner .reset li").find(".btn").fadeOut(500);
+	$(".banner .reset li").find(".txt").animate({
+		"top": "10%",
+		"opacity": "0"
+	}, 500);
+	timer = setInterval(play, 5000);
+})
