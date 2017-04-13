@@ -410,10 +410,12 @@ h1.logo img {
 
 
 .video{position: fixed; top: 0; left: 0; z-index: 10010; width: 100%; height: 100%; background: #101010;}
-
-
-
-
+.loading{ position: relative; z-index: 10011; width: 100%; height: 100%; overflow: hidden; }
+.video_loading{ position: absolute; top: 0; width: 100%; height: 100%; background: url(../images/loading.gif) center no-repeat #000;display: none; }
+.videoBox{ position: absolute; top: 0; z-index: 10009; width: 100%; height: 100%; background: #000; }
+.video_job{ position: fixed; bottom: 8%; right: 20px; z-index: 10010; height: 26px; border-radius: 15px; padding-right: 22px; line-height: 26px; text-align: center; font-size: 16px; color: #fff; cursor: pointer; background:url(../images/ico-dump.png) right no-repeat; }
+.video_logo{ position: fixed; top: 7.4%; left: 1.2%; z-index: 10010; width: 90%; height: 2.6%;}
+.video_logo img{ height: 100%; }
 
 
 
