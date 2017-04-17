@@ -33,12 +33,6 @@ function play() {
 	$(".reset li").eq(i).fadeIn(800).siblings().fadeOut(800);
 }
 
-//$(".pop li").hover(function() {
-//	clearInterval(timer);
-//}, function() {
-//	timer = setInterval(play, 5000);
-//});
-
 //列表
 $('.leftbar_main').hover(function() {
 	$('.meanu').stop().fadeOut(800);
@@ -83,4 +77,20 @@ $(".banner .reset").hover(function() {
 		"opacity": "0"
 	}, 500);
 	timer = setInterval(play, 5000);
+})
+
+//视频部分
+$(".video_job").click(function() {
+		$(".video").fadeOut(800);
+		$(".video").remove();
+		$(".main").fadeIn(800).css('display', 'block');
+	})
+	//监听视频播放结束
+vedio.addEventListener('ended', function() {
+	$(".video_job").fadeOut();
+	setTimeout(function() {
+		$(".video").remove();
+		$(".main").fadeIn(800).css('display', 'block');
+	}, 1000)
+
 })
