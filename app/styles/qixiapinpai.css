@@ -184,7 +184,10 @@ body {
 	padding: 26px 0 106px 0;
 	text-align: center;
 }
-
+.index .news .new_box .active{
+	color: #e2e2e2;
+    background: url(../images/qixia/bg_hd_on.png);
+}
 .index .news .news_head span {
 	padding-bottom: 10px;
 	font-size: 28px;
@@ -212,6 +215,15 @@ body {
 	background: url(../images/qixia/new_hd.png);
 }
 
+.index .news .abc {
+	position: fixed;
+	left: 50%;
+	margin-left: -500px;
+	right: 0;
+	top: 0;
+	z-index: 999999;
+}
+
 .index .news .new_head a {
 	display: inline-block;
 	position: relative;
@@ -229,17 +241,34 @@ body {
 .index .news .new_list {
 	width: 1000px;
 }
-.index .news .new_list ul li{
+
+.index .news .new_list ul li {
 	width: 1000px;
 	height: 306px;
-    line-height: 34px;
-    padding-top: 50px;
+	line-height: 34px;
+	padding-top: 50px;
 }
+
 .index .news .list_img {
 	float: left;
 	width: 426px;
 	height: 306px;
 	overflow: hidden;
+	position: relative;
+}
+
+.index .news .list_none {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	line-height: 330px;
+	text-align: center;
+	background: url(../images/qixia/bg_zhezhao.png) no-repeat;
+	background-size: cover;
 }
 
 .index .news .list_ri {
@@ -270,7 +299,7 @@ body {
 }
 
 .index .news .list_btn {
-	    text-align: right;
+	text-align: right;
 	width: 550px;
 	height: 32px;
 	position: relative;
@@ -282,46 +311,78 @@ body {
 .index .news .list_btn a {
 	float: right;
 	display: inline-block;
-    height: 30px;
-    margin-left: 3px;
-    padding: 0 40px;
-    border: 1px solid #e5e5e5;
-    line-height: 30px;
-    font-size: 16px;
-    color: #000;
-    background: #e5e5e5;
+	height: 30px;
+	margin-left: 3px;
+	padding: 0 40px;
+	border: 1px solid #e5e5e5;
+	line-height: 30px;
+	font-size: 16px;
+	color: #000;
+	background: #e5e5e5;
 }
-.index .news .list_btn a:hover{
+
+.index .news .list_btn a:hover {
 	background: #fff;
 }
-.index .news .list_brand{
+
+.index .news .list_brand {
 	width: 100%;
 	height: 304px;
 	margin-top: 40px;
 }
-.index .news .list_brand>img{
+
+.index .news .list_brand>img {
 	width: 100%;
 }
-.index .footer{
+
+.index .footer {
 	width: 100%;
 	height: 170px;
-	margin-top:3200px ;
+	margin-top: 3200px;
 	border-top: 1px #c12725 solid;
 }
-.index .footer .con{
-	    position: relative;
-    width: 816px;
-    height: 61px;
-    padding-left: 184px;
-    margin: auto;
+
+.index .footer .con {
+	position: relative;
+	width: 816px;
+	height: 61px;
+	padding-left: 184px;
+	margin: auto;
 }
-.index .footer .logo { width: 148px; height: 90px;float: left; margin-top: 46px;margin-left: -163px;}
-.index .footer .logo img { width: 100%; vertical-align: top; }
-.index .footer .addr{
+
+.index .footer .logo {
+	width: 148px;
+	height: 90px;
+	float: left;
+	margin-top: 46px;
+	margin-left: -163px;
+}
+
+.index .footer .logo img {
+	width: 100%;
+	vertical-align: top;
+}
+
+.index .footer .addr {
 	width: 816px;
 	height: 61px;
 	float: left;
 	margin-left: 3px;
 	margin-top: 36px;
 	border-left: 1px solid #a0a0a0;
+}
+
+.index .footer .addr .address {
+	color: #212121;
+	text-indent: 20px;
+	font-size: 12px;
+	line-height: 32px;
+}
+
+.index .footer .addr .ri {
+	margin-top: 5px;
+	text-indent: 20px;
+	font-size: 12px;
+	color: #cfcfcf;
+	line-height: 24px;
 }

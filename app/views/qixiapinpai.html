@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<title>Document</title>
 		<link rel="stylesheet" type="text/css" href="../styles/qixiapinpai.css" />
-		<!--<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>-->
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -42,8 +42,8 @@
 					<p class="new_line"></p>
 				</div>
 				<div class="new_box">
-					<div class="new_head">
-						<a href="javascript:;">梦洁家纺</a>
+					<div class="new_head" id="new_head">
+						<a href="javascript:;" class="active">梦洁家纺</a>
 						<a href="javascript:;">寐 MINE</a>
 						<a href="javascript:;">梦洁宝贝</a>
 						<a href="javascript:;">梦洁家居</a>
@@ -56,8 +56,11 @@
 
 					<div class="new_list">
 						<ul>
-							<li>
-								<div class="list_img"><img src="../images/qixia/lie1.jpg" /></div>
+							<li id="louti1">
+								<div class="list_img">
+									<img src="../images/qixia/lie1.jpg" />
+									<div class="list_none"><img src="../images/qixia/pic_logo01.png"/></div>
+								</div>
 								<dl class="list_ri">
 									<dt class="list_title"><h3>梦洁家纺</h3></dt>
 									<dd class="list_txt">
@@ -72,8 +75,8 @@
 									</dd>
 								</dl>
 							</li>
-							<li>
-								<div class="list_img"><img src="../images/qixia/lie2.jpg" /></div>
+							<li id="louti2">
+								<div class="list_img"><img src="../images/qixia/lie2.jpg" /><div class="list_none"><img src="../images/qixia/pic_logo02.png"/></div></div>
 								<dl class="list_ri">
 									<dt class="list_title">寐MINE<h3>
 				</h3></dt>
@@ -89,8 +92,8 @@
 									</dd>
 								</dl>
 							</li>
-							<li>
-								<div class="list_img"><img src="../images/qixia/lie3.jpg" /></div>
+							<li id="louti3">
+								<div class="list_img"><img src="../images/qixia/lie3.jpg" /><div class="list_none"><img src="../images/qixia/pic_logo03.png"/></div></div>
 								<dl class="list_ri">
 									<dt class="list_title"><h3>梦洁宝贝</h3></dt>
 									<dd class="list_txt">
@@ -105,8 +108,8 @@
 									</dd>
 								</dl>
 							</li>
-							<li>
-								<div class="list_img"><img src="../images/qixia/lie4.jpg" /></div>
+							<li id="louti4">
+								<div class="list_img"><img src="../images/qixia/lie4.jpg" /><div class="list_none"><img src="../images/qixia/pic_logo04.png"/></div></div>
 								<dl class="list_ri">
 									<dt class="list_title"><h3>梦洁家居</h3></dt>
 									<dd class="list_txt">
@@ -121,8 +124,8 @@
 									</dd>
 								</dl>
 							</li>
-							<li>
-								<div class="list_img"><img src="../images/qixia/lie5.jpg" /></div>
+							<li id="louti5">
+								<div class="list_img"><img src="../images/qixia/lie5.jpg" /><div class="list_none"><img src="../images/qixia/pic_logo05.png"/></div></div>
 								<dl class="list_ri">
 									<dt class="list_title"><h3>BESELF</h3></dt>
 									<dd class="list_txt">
@@ -137,8 +140,8 @@
 									</dd>
 								</dl>
 							</li>
-							<li>
-								<div class="list_img"><img src="../images/qixia/lie6.jpg" /></div>
+							<li id="louti6">
+								<div class="list_img"><img src="../images/qixia/lie6.jpg" /><div class="list_none"><img src="../images/qixia/pic_logo06.png"/></div></div>
 								<dl class="list_ri">
 									<dt class="list_title"><h3>平实美学</h3></dt>
 									<dd class="list_txt">
@@ -153,8 +156,8 @@
 									</dd>
 								</dl>
 							</li>
-							<li>
-								<div class="list_img"><img src="../images/qixia/lie7.jpg" /></div>
+							<li id="louti7">
+								<div class="list_img"><img src="../images/qixia/lie7.jpg" /><div class="list_none"><img src="../images/qixia/pic_logo07.png"/></div></div>
 								<dl class="list_ri">
 									<dt class="list_title"><h3>MEE</h3></dt>
 									<dd class="list_txt">
@@ -169,8 +172,8 @@
 									</dd>
 								</dl>
 							</li>
-							<li>
-								<div class="list_img"><img src="../images/qixia/lie8.jpg" /></div>
+							<li id="louti8">
+								<div class="list_img"><img src="../images/qixia/lie8.jpg" /><div class="list_none"><img src="../images/qixia/pic_logo08.jpg"/></div></div>
 								<dl class="list_ri">
 									<dt class="list_title"><h3>MINI MEE</h3></dt>
 									<dd class="list_txt">
@@ -185,8 +188,8 @@
 									</dd>
 								</dl>
 							</li>
-							<li>
-								<div class="list_img"><img src="../images/qixia/lie9.jpg" /></div>
+							<li id="louti9">
+								<div class="list_img"><img src="../images/qixia/lie9.jpg" /><div class="list_none"><img src="../images/qixia/pic_logo09.png"/></div></div>
 								<dl class="list_ri">
 									<dt class="list_title"><h3>DreamCoco</h3></dt>
 									<dd class="list_txt">
@@ -209,10 +212,13 @@
             <div class="footer">
             	<div class="con">
             		<div class="logo"><img src="../images/qixia/logo.jpg"></div>
-            		<div class="addr"></div>
+            		<div class="addr clearfix">
+            			<div class="address">地址：湖南长沙高新技术产业开发区麓谷产业基地谷苑路168号<span>|</span>人力资源热线：0731-82847858</div>
+            			<div class="ri">Copyright © 2016 湖南梦洁家纺股份有限公司 All Rights Reserved | 湘ICP备09023120号 | 招商加盟热线：0731-82848909 15575107112</div>
+            		</div>
             	</div>
             </div>
 		</div>
 	</body>
-
+<script src="../scripts/controllers/qixiapinpai.js"></script>
 </html>
