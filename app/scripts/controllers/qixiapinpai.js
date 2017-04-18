@@ -40,38 +40,37 @@ $("#new_head a").click(function() {
 	}, 500);
 });
 //下拉菜单
-$(document).click(function(){
-		$(".xiala_ul").removeClass("on");
-	})
-	$(".xiala").hover(function(){
+$(document).click(function() {
+	$(".xiala_ul").removeClass("on");
+})
+$(".xiala").hover(function() {
 
-	},function(){
-		$(".xiala_ul").removeClass("on");
-	})
-$(".xiala_shuru").click(function(){
-			if(!$(this).siblings("ul").hasClass("on")){
-				$(this).siblings("ul").addClass("on");
-				return false;
-			}
-			else{
-				$(this).siblings("ul").removeClass("on");
-				return false;
-			}
-			
-	})
+}, function() {
+	$(".xiala_ul").removeClass("on");
+})
+$(".xiala_shuru").click(function() {
+	if(!$(this).siblings("ul").hasClass("on")) {
+		$(this).siblings("ul").addClass("on");
+		return false;
+	} else {
+		$(this).siblings("ul").removeClass("on");
+		return false;
+	}
 
-$(".xiala_ul li").click(function(){
-			$(this).addClass("on").siblings().removeClass("on");	
-			$(this).parent("ul").removeClass("on");
-			var zhi = $(this).html();
-			$(this).parent(".xiala_ul").siblings().val(zhi);
-			
-	})
+})
+
+$(".xiala_ul li").click(function() {
+	$(this).addClass("on").siblings().removeClass("on");
+	$(this).parent("ul").removeClass("on");
+	var zhi = $(this).html();
+	$(this).parent(".xiala_ul").siblings().val(zhi);
+
+})
 
 // 加入信息栏
-	$(".btn_gojoin").on('click',function(){
-		$(this).parents('.li').find(".new_job").slideDown();
-	})
-	$(".new_span").on('click',function(){
-		$(this).parent(".new_job").slideUp();
-	})
+$(".btn_gojoin").on('click', function() {
+	$(this).parents('.li').find(".new_job").slideDown();
+})
+$(".new_span").on('click', function() {
+	$(this).parent(".new_job").slideUp();
+})
